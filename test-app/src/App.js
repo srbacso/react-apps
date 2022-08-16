@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import AppHeader from "./AppHeader";
 import AppFooter from "./AppFooter";
-import classes from "./App.module.css";
 import AppContent from "./AppContent";
 
 class App extends Component {
@@ -13,7 +12,7 @@ class App extends Component {
     };
 
     return (
-      <div className={classes.app}>
+      <div>
         <AppHeader {...myProps} />
         <AppContent />
         <AppFooter />

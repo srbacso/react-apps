@@ -1,18 +1,15 @@
-import React, { Component, Fragment } from "react";
-import classes from "./AppFooter.module.css";
+import React, { Component, Fragment } from 'react';
+import './AppFooter.css';
 
-class AppFooter extends Component {
-  render() {
-    const currentYear = new Date().getFullYear();
-    return (
-      <Fragment>
-        <hr />
-        <p className={classes.footer}>
-          Copyright &copy; {currentYear} Acme Ltd.
-        </p>
-      </Fragment>
-    );
-  }
+export default class AppFooter extends Component {
+
+    render() {
+        const currentYear = new Date().getFullYear();
+        return (
+            <Fragment>
+                <hr />
+                <p className="footer">Copyright &copy; 2020 - { currentYear} Acme Ltd.</p>
+            </Fragment>
+        );
+    }
 }
-
-export default AppFooter;

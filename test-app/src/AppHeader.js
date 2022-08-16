@@ -1,16 +1,23 @@
-import React, { Component, Fragment } from "react";
-import classes from "./AppHeader.module.css";
+import React, { Component, Fragment } from 'react';
 
-class AppHeader extends Component {
-  render() {
-    const currentYear = new Date().getFullYear();
-    return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <h3>{this.props.subject}</h3>
-      </div>
-    );
-  }
+export default class AppHeader extends Component {
+
+    constructor(props) {
+        super(props);
+        this.handlePostChange = this.handlePostChange.bind(this);
+    }
+
+    handlePostChange(posts) {
+        this.props.handlePostChange(posts);
+    }
+
+    render() {
+
+        return (
+            <Fragment>
+            <h1>{ this.props.title}</h1>
+            <p>There are {this.props.posts.length} entries in posts</p>
+            </Fragment>
+        );
+    }
 }
-
-export default AppHeader;
